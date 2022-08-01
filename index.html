@@ -13,12 +13,38 @@
         <h4 class="timer">Time: <span id="timer"></span></h4>
     </header>
 
+    <!-- First Page of Quiz -->
     <div id="starter-container" class="show">
         <div class="container-start">
             <h1>Coding Quiz Challenge</h1>
             <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
             <button class="button-startend" id="start-game">Start Quiz</button>
         </div>
+    </div>
+
+    <!-- Quiz Questions -->
+    <div id="question-container" class="hide">
+        <div class="container questions">
+            <div id="question">
+            <div id="answer-buttons" class="button-grid">
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- After Quiz -->
+    <div id="end-container" class="hide">
+        <div class="container end">
+            <h1>All done!</h1>
+        </div>
+    <!-- Score Sheet Form -->
+        <form id="initials-form" class="initials">
+            <p>Enter initials:
+                <input type="text" name="initials" id="initials" class="text-input"/>
+                <button class="button-startend" id="submit-score" type="submit">Submit</button>
+            </p>
+        </form>
+    </div>
 </body>
 
 
