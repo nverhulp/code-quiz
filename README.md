@@ -14,7 +14,14 @@ This week’s Challenge invites you to build a timed coding quiz with multiple-c
 
 ## Deployed Page
 
-<img src = "./assets/images/deployed-page.png">
+<img src = "./assets/images/deployed-page1.png">
+<img src = "./assets/images/deployed-page2.png">
+<img src = "./assets/images/deployed-page3.png">
+<img src = "./assets/images/deployed-page4.png">
+<img src = "./assets/images/deployed-page5.png">
+<img src = "./assets/images/deployed-page6.png">
+<img src = "./assets/images/deployed-page7.png">
+<img src = "./assets/images/deployed-page8.png">
 
 ## Acceptance Criteria
 
