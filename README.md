@@ -14,7 +14,7 @@ This week’s Challenge invites you to build a timed coding quiz with multiple-c
 
 ## Deployed Page
 
-
+<img src = "./assets/images/deployed-page.png">
 
 ## Acceptance Criteria
 
