@@ -179,3 +179,73 @@ questionIndex++
             showScore();
         }
 }
+
+// Score at the end
+var showScore = function() {
+    containerQuestionEl.classList.add("hide");
+    containerEndEl.classList.remove("hide");
+    containerEndEl.classList.add("show");
+
+    var scoreDisplay = document.createElement("p");
+    scoreDisplay.innerText = ("Your final score is" + score + "!");
+    containerScoreEl.appendChild(scoreDisplay);
+}
+
+// High Score Values
+var createHighScore = function(event) {
+    event.preventDefault()
+    var initials = document.querySelector("#initials").value;
+    if (!initials) {
+        alert ("Enter your initials!");
+        return;
+    }
+
+    formInitials.reset();
+
+    var highScore = {
+        initials: initials, 
+        score: score
+    }
+
+    // Sort scores
+    highScores.push(highScore);
+    highScores.sort((a,b) => {return b.score-a.score});
+
+    while (listHighSccoreEl.firstChild) {
+        listHighSccoreEl.removeChild(listHighSccoreEl.firstChild);
+    }
+
+    for (var i = 0; i < highScores.length; i++) {
+        var highScoreEl = document.createElement("li");
+        highScoreEl.className = "high-score";
+        highScoreEl.innerHTML = highScores[i].initials + " - " + highScores[i].score;
+        listHighSccoreEl.appendChild(highScoreEl);
+    }
+
+    saveHighScore();
+    displayHighScores();
+}
+
+// Save and View High Scores
+var saveHighScore = function () {
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+}
+
+var loadHighScore = function () {
+    var loadedHighScores = localStorage.getItem("highScores");
+    if (!loadedHighScores) {
+        return false;
+    }
+
+    loadedHighScores = JSON.parse(loadedHighScores);
+    loadedHighScores.sort((a,b) => {return b.score-a.score});
+
+    for (var i = 0; i < loadedHighScores.length; i++) {
+        var highScoreEl = document.createElement("li");
+        highScoreEl.className = "high-score";
+        highScoreEl.innerText = loadedHighScores[i].initials + " - " + loadedHighScores[i].score;
+        listHighSccoreEl.appendChild(highScoreEl);
+
+        highScores.push(loadedHighScores[i]);
+    }
+}
