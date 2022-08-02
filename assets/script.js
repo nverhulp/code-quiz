@@ -56,3 +56,25 @@ var questions = [
      choices:[{choice: '1. JavaScript'}, {choice: '2. Terminal/Bash'}, {choice: '3. For Loops'}, {choice: '4. Console.log'}]
     },
 ];
+
+// Back Button on High Score Page
+var renderStartPage = function () {
+    containerHighScoresEl.classList.add("hide");
+    containerHighScoresEl.classList.remove("show");
+    containerStartEl.classList.remove("hide");
+    containerStartEl.classList.add("show");
+    containerScoreEl.removeChild(containerScoreEl.lastChild);
+    questionIndex = 0;
+    gameover = "";
+    timerEl.textContent = 0;
+    score = 0;
+
+    if (correctEl.className = "show") {
+        correctEl.classList.remove("show");
+        correctEl.classList.add("hide");
+    }
+    if (wrongEl.className = "show") {
+        wrongEl.classList.remove("show");
+        wrongEl.classList.add("hide)";)
+    }
+}
