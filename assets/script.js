@@ -167,13 +167,13 @@ var answerCheck = function (event) {
     var selectedanswer = event.target
     if (arrayShuffledQuestions[QuestionIndex].a === selectedanswer.innerText) {
         answerCorrect()
-        score = score + 7
+        score = score + 10
     }
 
     else {
         answerWrong()
-        score = score - 1;
-        timeleft = timeleft - 3;
+        score = score - 5;
+        timeleft = timeleft - 10;
     };
     // Check if there is next question and go to if so
     QuestionIndex++
