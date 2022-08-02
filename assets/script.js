@@ -30,7 +30,6 @@ timerEl.innerText = 0;
 var highScores = [];
 
 // Array for Questions
-var arrayShuffleQuestions;
 var questionIndex = 0;
 
 // List of Questions for Code Quiz
@@ -76,5 +75,82 @@ var renderStartPage = function () {
     if (wrongEl.className = "show") {
         wrongEl.classList.remove("show");
         wrongEl.classList.add("hide)";)
+    }
+}
+
+// Start time at 60. Check if game is over or if there is time left
+var setTime = function () {
+    timeleft = 60;
+
+var timercheck = setInterval(function() {
+    timerEl.innerText = timeleft;
+    timeleft--
+
+    if (gameover) {
+        clearInterval(timercheck);
+    }
+
+    if (timeleft < 0) {
+        showScore();
+        timerEl.innerText = 0;
+        clearInterval(timercheck);
+    }
+
+    }, 1000);
+}
+
+var startGame = function() {
+// Show or hide start screen
+    containerStartEl.classList.add('hide');
+    containerStartEl.classList.remove('show');
+    containerQuestionEl.classList.remove('hide');
+    containerQuestionEl.classList.add('show');
+    setTime();
+    setQuestion();
+}
+
+// Next Question for Quiz
+var setQuestion = function() {
+    resetAnswers();
+    displayQuestion([questionIndex]);
+}
+
+// Remove Answer Buttons
+var resetAnswers = function() {
+    while (answerButtonsEl.firstChild) {
+        answerButtonsEl.removeChild(answerButtonsEl.firstChild);
+    };
+};
+
+// Questions and Answer Buttons
+var displayQuestion = function(index) {
+    questionEl.innerText = index.q;
+    for (var i = 0; i < index.choice.length; i++) {
+        var answerbutton = document.createElement('button');
+        answerbutton.innerText = index.choices[i].choice;
+        answerbutton.classList.add('button');
+        answerbutton.classList.add('answer-button');
+        answerbutton.addEventListener("click", answerCheck);
+        answerButtonsEl.appendChild(answerbutton)
+    }
+};
+
+// Show that answer is correct on screen
+var answerCorrect = function() {
+    if (correctEl.className = "hide") {
+        correctEl.classList.remove("hide");
+        correctEl.classList.add("banner");
+        wrongEl.classList.remove("banner");
+        wrongEl.classList.add("hide");
+    }
+}
+
+// Show that answer is wrong on screen
+var answerWrong = function() {
+    if (wrongEl.className = "hide") {
+        wrongEl.classList.remove("hide");
+        wrongEl.classList.add("banner");
+        correctEl.classList.remove("banner");
+        correctEl.classList.add("hide");
     }
 }
