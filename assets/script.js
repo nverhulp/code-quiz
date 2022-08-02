@@ -154,3 +154,28 @@ var answerWrong = function() {
         correctEl.classList.add("hide");
     }
 }
+
+// Check Answer
+var answerCheck = function(event) {
+    var selectedAnswer = event.target
+        if ([questionIndex].a === selectedAnswer.innerText){
+            answerCorrect()
+            score = score + 7;
+        }
+        
+        else {
+            answerWrong()
+            score = score - 1;
+            timeleft = timeleft - 3;
+        };
+// Check if there is next question and go to if so
+questionIndex++
+        if (length > questionIndex + 1) {
+            setQuestion();
+        }
+
+        else {
+            gameover = "true";
+            showScore();
+        }
+}
