@@ -50,7 +50,7 @@ THEN I can save my initials and score
 
 ## URL of Deployed Application
 
-
+[Deployed Gitpage](https://nverhulp.github.io/code-quiz/)
 
 ## Credits
 
