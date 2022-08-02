@@ -281,3 +281,23 @@ var displayHighScores = function() {
         wrongEl.classList.add("hide");
     }
 }
+
+// Clear High Scores
+var clearScores = function() {
+    highScores = [];
+
+    while(listHighSccoreEl.firstChild) {
+        listHighSccoreEl.removeChild(listHighSccoreEl.firstChild);
+    }
+
+    localStorage.clear(highScores);
+}
+
+loadHighScore()
+
+// Buttons and Forms
+buttonStartEl.addEventListener("click",startGame);
+formInitials.addEventListener("submit", createHighScore);
+viewHighScoreEl.addEventListener("click", displayHighScores);
+buttonGoBackEl.addEventListener("click", renderStartPage);
+buttonClearScoresEl.addEventListener("click", clearScores);
