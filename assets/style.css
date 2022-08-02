@@ -5,10 +5,10 @@
 /* Body */
 body {
     background: white;
-    color: purple;
+    color:purple;
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Header */
@@ -21,17 +21,17 @@ header {
 
 #view-high-scores:hover {
     cursor: pointer;
-    color: grey;
+    color:plum;
 }
 
 header h4 {
     padding-left: 20px;
-    font-size: 2.0rem;
+    font-size: 20px;
     display: inline;
 }
 
 .timer {
-    font-size: 2.0rem;
+    font-size: 2opx;
     color: black;
     display: inline;
     text-align: right;
@@ -87,7 +87,7 @@ p {
 }
 
 .end input:focus {
-    border: 2px solid purple;
+    border: 2px solid darkslateblue;
 }
 
 .show {
@@ -111,7 +111,7 @@ p {
 
 /* Buttons */
 .btn {
-    background: purple;
+    background: darkslateblue;
     color: white;
     padding: 10px;
     border-radius: 10px;
@@ -121,7 +121,7 @@ p {
 }
 
 .btn:hover {
-    background: hotpink;
+    background: purple;
     border-radius: 10px;
     box-shadow: 0 2px grey;
     cursor: pointer;
