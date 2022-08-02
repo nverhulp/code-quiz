@@ -30,6 +30,7 @@ timerEl.innerText = 0;
 var highScores = [];
 
 // Array for Questions
+var arrayShuffledQuestions;
 var questionIndex = 0;
 
 // List of Questions for Code Quiz
@@ -105,6 +106,7 @@ var startGame = function() {
     containerStartEl.classList.remove('show');
     containerQuestionEl.classList.remove('hide');
     containerQuestionEl.classList.add('show');
+    arrayShuffledQuestions = questions.sort(() => Math.random() - 0.5);
     setTime();
     setQuestion();
 }
@@ -112,7 +114,7 @@ var startGame = function() {
 // Next Question for Quiz
 var setQuestion = function() {
     resetAnswers();
-    displayQuestion([questionIndex]);
+    displayQuestion(arrayShuffledQuestions[questionIndex]);
 }
 
 // Remove Answer Buttons
@@ -158,7 +160,7 @@ var answerWrong = function() {
 // Check Answer
 var answerCheck = function(event) {
     var selectedAnswer = event.target
-        if ([questionIndex].a === selectedAnswer.innerText){
+        if (arrayShuffledQuestions[questionIndex].a === selectedAnswer.innerText){
             answerCorrect()
             score = score + 7;
         }
@@ -170,7 +172,7 @@ var answerCheck = function(event) {
         };
 // Check if there is next question and go to if so
 questionIndex++
-        if (length > questionIndex + 1) {
+        if (arrayShuffledQuestions.length > questionIndex + 1) {
             setQuestion();
         }
 
