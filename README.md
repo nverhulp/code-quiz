@@ -39,7 +39,18 @@ THEN I can save my initials and score
 
 ## Comments
 
+1. Created Home Page for mini JavaScript quiz
+2. Added a timer in the top right corner
+3. Created a button that would take user to page with high scores
+4. Included several quiz questions that displayed whether user was correct or wrong
+5. Used hover function for user to see which answer they are over
+6. Created form that allows user to input their initials to display on score page
+7. Added "Go Back" and "Clear High Scores" buttons
+8. Made it so time is subtracted from clock when answer is incorrect
+
 ## URL of Deployed Application
+
+
 
 ## Credits
 
