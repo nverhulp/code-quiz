@@ -42,3 +42,6 @@ THEN I can save my initials and score
 ## URL of Deployed Application
 
 ## Credits
+
+1. Article about hover function by [W3Schools](https://www.w3schools.com/cssref/sel_hover.asp)
+2. Articles about buttons and forms by [W3Schools](https://www.w3schools.com/js/js_input_examples.asp)
