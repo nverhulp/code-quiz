@@ -145,3 +145,32 @@ p {
     text-align: left;
     font-size: 3.0vw;
 }
+
+/* Correct or Wrong */
+.banner {
+    font-size: 25px;
+    text-align: center;
+    color: grey;
+    font-style: italic;
+    margin: 0 100px;
+}
+
+.banner h2 {
+    border-top: 2px solid grey;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+}
+
+/* High Scores */
+ol {
+    list-style-type: number;
+}
+
+li:nth-child(old) {
+    background: grey;
+}
+
+li {
+    font-size: 4.0vw;
+}
