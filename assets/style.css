@@ -48,13 +48,13 @@ header h4 {
 
 h1 {
     color:black;
-    font-size: 3.0rem;
+    font-size: 50px;
     font-weight: bold;
 }
 
 p {
     color: black;
-    font-size: 2.0 rem;
+    font-size: 20px;
 }
 
 .start {
@@ -82,7 +82,7 @@ p {
     border-width: 1px;
     padding: 5px;
     width: 35%;
-    font-size: 2.2rem;
+    font-size: 20px;
     border-radius: 5px;
 }
 
@@ -101,7 +101,7 @@ p {
 #question {
     color: black;
     text-align: left;
-    font-size: 3.0rem;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -152,12 +152,12 @@ p {
 .answerbtn {
     width: 50%;
     text-align: left;
-    font-size: 3.0vw;
+    font-size: 20px;
 }
 
 /* Correct or Wrong */
 .banner {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     color: grey;
     font-style: italic;
@@ -177,9 +177,9 @@ ol {
 }
 
 li:nth-child(odd) {
-    background: grey;
+    background: lightgray;
 }
 
 li {
-    font-size: 4.0vw;
+    font-size: 30px;
 }
