@@ -111,3 +111,37 @@ p {
     margin-top: 10px;
 }
 
+.button:hover {
+    background: hotpink;
+    border-radius: 10px;
+    box-shadow: 0 2px grey;
+    cursor: pointer;
+}
+
+.button:active {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 grey;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+    grid-gap: 5px;
+    margin: 20px 0;
+}
+
+.startend {
+    width: 25%;
+    margin-top: 10px;
+}
+
+.answerbutton {
+    width: 50%;
+    text-align: left;
+    font-size: 3.0vw;
+}
